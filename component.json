@@ -1,0 +1,238 @@
+{
+    "title": "Open Data",
+    "description": "Latest Swagger specification for OpenData",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/openbanking.org.uk/v1.3/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://developer.openbanking.org.uk/reference-implementation/open-banking/v1.3",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_atms": {
+            "main": "./lib/actions/get_atms.js",
+            "title": "Gets a list of all `ATM` objects.",
+            "description": "Gets a list of all `ATM` objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_atms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "head_atms": {
+            "main": "./lib/actions/head_atms.js",
+            "title": "Gets header information on the current set of `ATM` data",
+            "description": "Gets header information on the current set of `ATM` data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/head_atms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_branches": {
+            "main": "./lib/actions/get_branches.js",
+            "title": "Gets a list of all `Branch` objects.",
+            "description": "Gets a list of all `Branch` objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_branches.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "head_branches": {
+            "main": "./lib/actions/head_branches.js",
+            "title": "Gets header information on the current set of `Branch` data",
+            "description": "Gets header information on the current set of `Branch` data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/head_branches.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_business_current_accounts": {
+            "main": "./lib/actions/get_business_current_accounts.js",
+            "title": "Gets a list of all `Branch Current Account` objects.",
+            "description": "Gets a list of all `Branch Current Account` objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_business_current_accounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "head_business_current_accounts": {
+            "main": "./lib/actions/head_business_current_accounts.js",
+            "title": "Gets header information on the current set of `Business Current Account` data",
+            "description": "Gets header information on the current set of `Business Current Account` data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/head_business_current_accounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_commercial_credit_cards": {
+            "main": "./lib/actions/get_commercial_credit_cards.js",
+            "title": "Gets a list of all `Commerical Credit Card` objects.",
+            "description": "Gets a list of all `Commerical Credit Card` objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_commercial_credit_cards.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "head_commercial_credit_cards": {
+            "main": "./lib/actions/head_commercial_credit_cards.js",
+            "title": "Gets header information on the current set of `Commerical Credit Card` data",
+            "description": "Gets header information on the current set of `Commerical Credit Card` data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/head_commercial_credit_cards.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_personal_current_accounts": {
+            "main": "./lib/actions/get_personal_current_accounts.js",
+            "title": "Gets a list of all `Personal Current Account` objects.",
+            "description": "Gets a list of all `Personal Current Account` objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_personal_current_accounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "head_personal_current_accounts": {
+            "main": "./lib/actions/head_personal_current_accounts.js",
+            "title": "Gets header information on the current set of `Personal Current Account` data",
+            "description": "Gets header information on the current set of `Personal Current Account` data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/head_personal_current_accounts.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_unsecured_sme_loans": {
+            "main": "./lib/actions/get_unsecured_sme_loans.js",
+            "title": "Gets a list of all `Unsercured SME Lending` objects.",
+            "description": "Gets a list of all `Unsercured SME Lending` objects.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_unsecured_sme_loans.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "head_unsecured_sme_loans": {
+            "main": "./lib/actions/head_unsecured_sme_loans.js",
+            "title": "Gets header information on the current set of `Unsercured SME Lending` data",
+            "description": "Gets header information on the current set of `Unsercured SME Lending` data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/head_unsecured_sme_loans.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

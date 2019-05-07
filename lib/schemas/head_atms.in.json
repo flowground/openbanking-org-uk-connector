@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "If_Modified_Since": {
+            "required": false,
+            "type": "string"
+        },
+        "If_None_Match": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
